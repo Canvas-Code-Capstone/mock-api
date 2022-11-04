@@ -14,7 +14,7 @@ def hello_world():
 @app.route('/makefile/<name>')
 def get_makefile(name):
     print('in /makefile')
-    path = './responses/{}'.format(name)
+    path = './responses/{}/makefile'.format(name)
     return send_file(path)
 
 
