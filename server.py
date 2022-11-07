@@ -2,7 +2,7 @@ from flask import Flask, send_file, jsonify
 
 app = Flask(__name__)
 
-@app.route("/hello")
+@app.route("/hello", methods=['GET'])
 def hello_world():
     print('in hello')
     return jsonify(
@@ -11,12 +11,16 @@ def hello_world():
         }
     )
 
-@app.route('/makefile/<name>')
+@app.route('/makefile/<name>', methods=['GET'])
 def get_makefile(name):
     print('in /makefile')
     path = './responses/{}/makefile'.format(name)
     return send_file(path)
 
+@app.route('/api/v1/files/<fileId>', methods=['GET'])
+def get_canvas_file(fileId):
+    path = './responses/canvas/get-file.json'
+    return send_file(path)
 
 if __name__ == '__main__':
     app.run(debug=True, port=55321)
