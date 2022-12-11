@@ -1,0 +1,18 @@
+{
+    "submissionId": 2543245,
+    "studentId": 423423,
+    "assignmentId": 2342342,
+    "submission_files": [
+            {
+                "name": "main.cpp",
+                "fileContent": ["using namespace", "\nint main {"],
+            },
+            {
+                "name": "hello.cpp",
+                "fileContent": "using namespace std;\n class Hello { Hello () } <"
+            }
+    ],
+    "executableFile": "hello.exe"
+}
+
+

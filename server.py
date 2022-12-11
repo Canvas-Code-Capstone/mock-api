@@ -26,5 +26,13 @@ def get_canvas_file(fileId):
     path = 'responses/canvas/get-file/{}.json'.format(fileId)
     return send_file(path)
 
+
+@app.route('/api/v1/courses/<course_id>/assignments/<assignment_id>'
+           '/submissions/<user_id>', methods=['GET'])
+def get_canvas_submission(course_id, assignment_id, user_id):
+    path = ''
+    return send_file(path)
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=55321)
