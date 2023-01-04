@@ -2,17 +2,46 @@
     "submissionId": 2543245,
     "studentId": 423423,
     "assignmentId": 2342342,
-    "submission_files": [
+    "submissionFiles": [
             {
                 "name": "main.cpp",
-                "fileContent": ["using namespace", "\nint main {"],
+                "fileContent": [
+                  "#include <iostream>\n",
+                  "\n",
+                  "int main() {\n",
+                  "    Hello hello;\n",
+                  "    hello.sayHello();\n",
+                  "    return 0;\n",
+                  "}"
+                ]
             },
             {
-                "name": "hello.cpp",
-                "fileContent": "using namespace std;\n class Hello { Hello () } <"
+                "name": "Hello.h",
+                "fileContent": [
+                  "#pragma once\n",
+                  "\n",
+                  "class Hello {\n",
+                  "public:\n",
+                  "    void sayHello();\n",
+                  "}"
+                ]
+            },
+            {
+                "name": "Hello.cpp",
+                "fileContent": [
+                  "#include <iostream>\n",
+                  "#include \"Hello.h\"\n",
+                  "\n",
+                  "using namespace std;\n",
+                  "\n",
+                  "void Hello::sayHello() {\n",
+                  "    cout << \"Hello World!\" << endl;\n",
+                  "}"
+                ]
             }
     ],
-    "executableFile": "hello.exe"
+    "executableFileName": "hello.exe",
+    "submissionDirectory": "129373263"
 }
 
 

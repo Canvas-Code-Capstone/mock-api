@@ -33,6 +33,10 @@ def get_canvas_submission(course_id, assignment_id, user_id):
     path = ''
     return send_file(path)
 
+@app.route('/submission/courses/<courseId>/assignments/<assignmentId>/student/<studentId>/userType/<userType>', methods=['GET'])
+def get_file_submission(assignmentId, courseId, studentId, userType):
+    path = 'responses/studentSubmission.json'
+    return send_file(path)
 
 if __name__ == '__main__':
     app.run(debug=True, port=55321)
