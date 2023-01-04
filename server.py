@@ -39,4 +39,4 @@ def get_file_submission(assignmentId, courseId, studentId, userType):
     return send_file(path)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=55321)
+    app.run(debug=True, port=5000)
